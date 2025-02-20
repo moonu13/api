@@ -1,0 +1,10 @@
+{
+    "success": true,
+    "data": {
+        "rows": 10,
+        "risk": "low",
+        "bet": 1000000.0,
+        "x": 1000000.1,
+        "winAmount": 1000000.1
+    }
+}
