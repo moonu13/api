@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>command input nya~</title>
+  <meta charset="utf-8">
+</head>
+<body style="background:#110e0f;color:#ffe7f3;font-family:'Outfit',sans-serif;text-align:center;padding:30px;">
+  <h1 style="color:#ff3d9e;">enter ur secret command meow ~ 🐾</h1>
+  <textarea id="cmd" rows="6" cols="40" placeholder="like... neofetch or whoami" style="background:#181416;color:#ffd5ea;border:2px solid #ff6eb6;border-radius:15px;padding:10px;"></textarea>
+  <br><br>
+  <button onclick="downloadCommand()" style="background:#ff3d9e;color:#110e0f;padding:10px 20px;border-radius:15px;border:none;cursor:pointer;">💾 save command.txt</button>
+
+  <script>
+    function downloadCommand() {
+      const text = document.getElementById('cmd').value;
+      const blob = new Blob([text], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'command.txt';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
